@@ -1,7 +1,7 @@
 // Assignment code here
 
 
-// starting with versions as explained in webdev video, will need to transition to meet assingnment prompts
+// starting with versions as explained in webdev video, will need to transition to meet assingnment format
 // 1st user step is define length
 // 4 Password components: Uppercase, lowercase, numbers, special characters
 //
@@ -21,6 +21,12 @@ characterAmountNumber.addEventlistener('input', syncCharacterAmount)
 //listen for form submission
 form.addEventListener('submit', e => {
   e.preventDefault()
+  const characterAmount = characterAmountNumber.value
+  const includeUppercase = includeUppercaseElement.checked
+  const includeLowercase = includeLowercaseElement.checked
+  const includeNumbers = includeuNumbersElement.checked
+  const includeSpecial = includeSpecialElement.checked
+  const password = generatePassword(characterAmount,includeUppercase, includeLowercase, includeNumbers, includeSpecial)
 })
 
 
