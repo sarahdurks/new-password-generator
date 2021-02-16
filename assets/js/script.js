@@ -10,12 +10,15 @@
 // numbers = “0123456789”;
 // specialCharacters = “!#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
 
+// constants
+const characterAmountNumber = document.getElementById ('characterAmountNumber')
+const IncludeUppercaseElement = document.getElementById ('includeUppercase')
+const IncludeLowercaseElement = document.getElementById ('includeLowercase')
+const IncludeNumbersElement = document.getElementById ('includeNumbers')
+const IncludeSpecialElement = document.getElementById ('includeSpecial')
 
-//parameters password length
-const characterAmountRange = document.getElementById
 const form = document.getElementById('passwordGeneratorForm')
 
-characterAmountNumber.addEventlistener('input', syncCharacterAmount)
 characterAmountNumber.addEventlistener('input', syncCharacterAmount)
 
 //listen for form submission
