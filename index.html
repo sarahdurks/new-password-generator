@@ -8,24 +8,36 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="wrapper">
+    <div class="container"></div>
+      
       <header>
         <h1>Password Generator</h1>
       </header>
-      <div class="card">
-        <div class="card-header">
-          <h2>Generate a Password</h2>
-        </div>
-        <div class="card-body">
-          <textarea
-            readonly
-            id="password"
-            placeholder="Your Secure Password"
-            aria-label="Generated Password"
-          ></textarea>
-        </div>
-        <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
+      <h3>Your Secure Password</h3>
+      <form id=passwordGeneratorForm>
+         <!--will need to change to align with browser prompt but testing checkboxes from WDS video for functionality and logic-->
+  
+<label for="characterAmountNumber">Number Of Characters</label>
+<Input type="number" min="8" max="128" id="characterAmountRange">
+  
+ 
+  <label for="includeUppercase">Include Lowercase</label>
+  <input type="checkbox" id="includeLowercase">
+
+  <label for="includeUppercase">Include Uppercase</label>
+  <input type="checkbox" id="includeUppercase">
+
+  <label for="includeUppercase">Include Numbers</label>
+  <input type="checkbox" id="includeNumbers">
+
+  <label for="includeSpecial">Include Special Characters</label>
+  <input type="checkbox" id="includeSpecial">
+
+
+<!--think I will need to add event listener back-->
+<button type="submit">Generate Password</button>
+     
+
         </div>
       </div>
     </div>
