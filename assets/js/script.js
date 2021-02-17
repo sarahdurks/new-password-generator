@@ -2,17 +2,24 @@
 // DETERMINE LENGTH AND INCLUSION OF CHARACTER TYPES FOR PASSWORD IN PROMPTS.
 
 // 1st Step - Establish Password Length 
-function promptLength()
-("How many characters do you want to include in your password? Must between 8 and 128.", "");
-if (promptLength === "" || promptLength === null || isNaN(promptLength) || promptLength < 8 || promptLength > 128 ||) // trying to list all the things we don't want
+
+function promptMe(){
+var characterAmountNumber = window.prompt("How many characters do you want to include in your password? Must between 8 and 128.", "");
+if (characterAmountNumber === "" || characterAmountNumber === null || isNaN(characterAmountNumber) || characterAmountNumber < 8 || characterAmountNumber > 128 ||) // trying to list all the things we don't want
     {window.alert("Not a valid password length, please submit a number between 8 - 128.")}
    else {
     document.getElementById('characterAmountNumber'} // Do I need to parse this to make a usable number? 
-  
+}   
+    var taskFormHandler = function (event) {
+        event.preventDefault();
+    // convert answer from prompt to an actual number
+      shopOptionPrompt = parseInt(shopOptionPrompt);
 
   // 2nd Step - Include uppercase 
+
   var includeUppercase = confirm("Do you want to include Upper case letters in your password?");
     if (confirm("includeUppercase") == true), {
+=
         document.getElementById(“includeUppercase”);
     }
   
@@ -23,13 +30,15 @@ if (promptLength === "" || promptLength === null || isNaN(promptLength) || promp
     }
   
    // 4th Step - Include numbers
+
    var includeNumbers = confirm("Do you want to include Numbers in your password?");
    if (confirm == true), {
         document.getElementById(“includeNumbers”),
+
     }
   
     // 5th Step - Include special characters
-    var includeSpecial = confirm("Do you want to include Special Characters (e.g., !@#$%) in your password?");
+    var includeSpecial = cwindow.confirm("Do you want to include Special Characters (e.g., !@#$%) in your password?");
     if (includeSpecial) {
      document.getElementById(“includeSpecial”);
     }
