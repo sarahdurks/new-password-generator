@@ -28,12 +28,29 @@
                 ></textarea>
               </div>
               <div class="card-footer">
-                <button id="generate" class="btn" onclick="promptLength()">Generate Password</button>
-            
+                <button id="generate" class="btn" onclick="promptMe()">Generate Password</button>
+                <button type="button" onClick="myfunc()">other button js in html file</button>
+  
+  <script>
+    function myfunc() {
+      var a = prompt("Enter the year?");
+      if (a % 4 == 0) {
+        if (a % 100 == 0) {
+          if (a % 400 == 0) {
+            window.alert("it is a leap year");
+          }
+          else:
+            window.alert("it is not a leap year");
+        }
+        else:
+          window.alert("it is a leap year");
+      }
+    }
+  </script>
 
         </div>
       </div>
     </div>
-    <script src="../assets/js/script.js"></script>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
