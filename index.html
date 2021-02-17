@@ -9,8 +9,6 @@
   </head>
 
   <body>
-      <h1 class="title">Password Generator</h1>
-      <h3 class="password-display" id="passwordDisplay">Your Secure Password</h3>
       <form id="passwordGeneratorForm" class="form">
         <body>
           <div class="wrapper">
@@ -24,18 +22,18 @@
               <div class="card-body">
                 <textarea
                   readonly
-                  id="password"
+                  id="passwordDisplay"
                   placeholder="Your Secure Password"
                   aria-label="Generated Password"
                 ></textarea>
               </div>
               <div class="card-footer">
-                <button id="generate" class="btn" onclick="LengthPrompt()">Generate Password</button>
+                <button id="generate" class="btn" onclick="promptLength()">Generate Password</button>
             
 
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
+    <script src="../assets/js/script.js"></script>
   </body>
 </html>
