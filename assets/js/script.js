@@ -1,46 +1,37 @@
 
-// DETERMINE LENGTH AND INCLUSION OF CHARACTER TYPES FOR PASSWORD IN PROMPTS.
 
-// 1st Step - Establish Password Length 
+// 1st Step - Establish Password Length, convert to number, user has to do it to progress
+//// Messaging when it doesn't meet criteria? Right now it just loops you. Trigger from button not correct on this, could get it to run immediately only
 
-function promptMe(){
-var characterAmountNumber = window.prompt("How many characters do you want to include in your password? Must between 8 and 128.", "");
-if (characterAmountNumber === "" || characterAmountNumber === null || isNaN(characterAmountNumber) || characterAmountNumber < 8 || characterAmountNumber > 128 ||) // trying to list all the things we don't want
-    {window.alert("Not a valid password length, please submit a number between 8 - 128.")}
-   else {
-    document.getElementById('characterAmountNumber'} // Do I need to parse this to make a usable number? 
-}   
-    var taskFormHandler = function (event) {
-        event.preventDefault();
-    // convert answer from prompt to an actual number
-      shopOptionPrompt = parseInt(shopOptionPrompt);
+let result= '';
+let i = 0;
+do {var characterAmountNumber = parseInt(window.prompt("Please enter a number between 8 and 128 for your password length.", ""), 10);
+} while(isNaN(characterAmountNumber) || characterAmountNumber > 128 || characterAmountNumber < 8);
+{
+document.createElementId(characterAmountNumber);}
 
-  // 2nd Step - Include uppercase 
-
-  var includeUppercase = confirm("Do you want to include Upper case letters in your password?");
-    if (confirm("includeUppercase") == true), {
-=
-        document.getElementById(“includeUppercase”);
-    }
-  
+// 2nd Step - Include uppercase 
+//// Trying to tie user answering question to create "item" representing criteria if true, then if it exists it will be part of passsword later
+//// May be a console.log >> convert or "remember" other way? return the value?
+  var includeUppercase = window.confirm("Do you want to include Upper case letters in your password?");
+    if (confirm(includeUppercase) == true) {
+    document.createElementId(includeUppercase);
+}
   // 3rd Step - Include lowercase
-  var includeLowercase = confirm("Do you want to include Lower case letters in your password?");
-    if (confirm("includeLowercase") == true), {
-        document.getElementById(“includeLowercase”);
-    }
-  
+  var includeLowercase = window.confirm("Do you want to include Lower case letters in your password?");
+    if (confirm(includeLowercase) == true) {
+    document.createElementId(includeLowercase);
+}
    // 4th Step - Include numbers
-
-   var includeNumbers = confirm("Do you want to include Numbers in your password?");
-   if (confirm == true), {
-        document.getElementById(“includeNumbers”),
-
+   var includeNumbers = window.confirm("Do you want to include Numbers in your password?");
+   if (confirm (includeNumbers)== true) {
+    document.createElementId(includeNumbers);
     }
   
     // 5th Step - Include special characters
-    var includeSpecial = cwindow.confirm("Do you want to include Special Characters (e.g., !@#$%) in your password?");
-    if (includeSpecial) {
-     document.getElementById(“includeSpecial”);
+    var includeSpecial = window.confirm("Do you want to include Special Characters (e.g., !@#$%) in your password?");
+    if (confirm (includeSpecial) == true) {
+    document.createElementId(includeSpecial);
     }
   
     // DOCUMENTED USER INPUTS >> CONSTANTS
@@ -65,7 +56,7 @@ if (characterAmountNumber === "" || characterAmountNumber === null || isNaN(char
     const SPECIAL_CHAR_CODES = arrayFromLowToHigh(33, 47).concat(arrayFromLowToHigh(58, 64), .concat(arrayFromLowToHigh(91, 96), .concat(arrayFromLowToHigh(123, 126)) 
 
     // if we include a type in a password, this  references the array defined above
-    // suggestion from vs code changed this from being labeled function?
+    // suggestion from VS code changed this from being labeled function?
     (characterAmount, includeUppercase, includeLowercase, includeNumbers, includeSpecial) => {
     let charCodes = LOWERCASE_CHAR_CODES; //why does this not map to includelowercase? also different order than listed in funciton above
             if (includeUppercase) charCodes = charCodes.concat(UPPERCASE_CHAR_CODES);
