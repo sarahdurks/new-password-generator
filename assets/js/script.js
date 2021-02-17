@@ -1,11 +1,12 @@
 // Assignment code here
 
-// VALIDATE the input for number
-
-// LENGTH
-//const aNumber = Number(window.prompt("Type a number", ""));
 // https://stackoverflow.com/questions/15047140/javascript-prompt-number-and-continue-prompting-if-answer-is-wrong not sure this is right
 
+
+
+PROMPTS
+
+// Length Prompt - More Complex - Need to validate number meets range and actually is a number - not sure this is close yet
 characterAmountNumber = prompt("How many characters do you want toinclude in your password? Must between 8-128.","8");
 
 function promptcharacterAmountNumber( text)
@@ -24,39 +25,30 @@ if (number <= 128 && number >= 8) {
     promptForNumber("Your submission (" + number + ") doesn't meet criteria. It is not between 8 and 128", "");
 }
 
-// DEFINE PASSWORD CRIERIA FOR UPPERCASE,LOWERCASE, NUMBERS, SPECIAL
-
-// Trying to "keep" value user inputs if true to later include that character tyoe in  password. not sure that is correct approach
-
-
+// 1st Prompt - Include uppercase
 var includeUppercase = prompt("Do you want to include Upper case letters in your password?");
 if(includeUppercase)
-{document.getElementById(“includeUppercase”);} else {console.log(“”);} 
+{document.getElementById("includeUppercase");} else {console.log(“”);}  // Trying to "keep" value user inputs if true to later include that character tyop in  password. not sure that is correct approach
 
+// 2nd Prompt - Include lowercase
 var includeLowercase = prompt("Do you want to include Lower case letters in your password?");
 if(includeLowercase)
   {document.getElementById((“includeLowercase”);} else { console.log(“”);}
 
+// 3rd Prompt - Include Numbers
 var includeNumbers = prompt ("Do you want to include Numbers in your password?");
 if(includeNumbers)
-{document.getElementById(“includeNumbers); } else { console.log(“”); }
+{document.getElementById("includeNumbers"); } else { console.log(“”);}
 
+// 4th Prompt - Include Numbers
 var includeSpecial = prompt ("Do you want to include Special Characters (e.g., !@#$%) in your password?");
 if(includeSpecial)
 {document.getElementById(“includeSpecial”); } else { console.log(“”); }
 
-//if a user wants allof the above things in the password, there should be an ID for each type we use later
 
 
-// starting with versions as explained in webdev video, will need to transition to meet assingnment format
-//
-// upperLetters = “ABCDEFGHIJKLMNOPSQRSTUVWXYZ”;
-// lowerLetters = “abcdefghijklmnopqrstuvwxyz”;
-// numbers = “0123456789”;
-// specialCharacters = “!#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
-
-// constants
-/* This part takes dynamic T/F value from  user input in prompts and translates it into a constant*/
+//Not clear here rewatch video
+/* This part takes dynamic T/F value from  user input in prompts and translates it into a constant - user action means we log element id, and then if included it becomes a part of password */ 
 const characterAmountNumber = document.getElementById ('characterAmountNumber') // Length set by user
 const IncludeUppercaseElement = document.getElementById ('includeUppercase') //  If user includes uppercase
 const IncludeLowercaseElement = document.getElementById ('includeLowercase') // If user includes lowercase
@@ -78,7 +70,7 @@ characterAmountNumber.addEventlistener('input', syncCharacterAmount) //takes num
   // const includeNumbers = includeuNumbersElement.checked
  // const includeSpecial = includeSpecialElement.checked
   
-  
+  //adds up to the password
   const password = generatePassword(characterAmount,includeUppercase, includeLowercase, includeNumbers, includeSpecial)
   passwordDisplay.innerText = password
 })
@@ -96,9 +88,9 @@ const SYMBOL_CHAR_CODES = arrayFromLowToHigh(33, 47).concat(arrayFromLowToHigh(5
 
 function generatePassword (characterAmount,includeUppercase, includeLowercase, includeNumbers, includeSpecial){
   let charCodes =LOWERCASE_CHAR_CODES
-  if (includeUppercase) charCodes = charCodes.concat (UPPERCASE_CHAR_CODES)
-  if (includeUppercase) charCodes = charCodes.concat (NUMBER_CHAR_CODES)
-  if (includeUSymbol) charCodes = charCodes.concat (SYMBOL_CHAR_CODES)
+  if (includeUppercase) charCodes = charCodes.concat (UPPERCASE_CHAR_CODES) // are these less random if concatenated?
+  if (includeNumbers) charCodes = charCodes.concat (NUMBER_CHAR_CODES)
+  if (includeSpecial) charCodes = charCodes.concat (SYMBOL_CHAR_CODES)
 
 const passwordCharacters = []
 for (let i = 0; i < characterAmount, i++) {
