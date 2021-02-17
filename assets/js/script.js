@@ -12,20 +12,20 @@ if (promptLength === "" || promptLength === null || isNaN(promptLength) || promp
 
   // 2nd Step - Include uppercase 
   var includeUppercase = confirm("Do you want to include Upper case letters in your password?");
-    if (includeUppercase) {
+    if (confirm("includeUppercase") == true), {
         document.getElementById(“includeUppercase”);
     }
   
   // 3rd Step - Include lowercase
   var includeLowercase = confirm("Do you want to include Lower case letters in your password?");
-    if (includeLowercase) {
+    if (confirm("includeLowercase") == true), {
         document.getElementById(“includeLowercase”);
     }
   
    // 4th Step - Include numbers
    var includeNumbers = confirm("Do you want to include Numbers in your password?");
-    if (includeNumbers) {
-        document.getElementById(“includeNumbers”);
+   if (confirm == true), {
+        document.getElementById(“includeNumbers”),
     }
   
     // 5th Step - Include special characters
