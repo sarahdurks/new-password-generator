@@ -2,7 +2,7 @@
 
 // 1st Step - Establish Password Length, convert to number, user has to do it to progress
 //// Messaging when it doesn't meet criteria? Right now it just loops you. Trigger from button not correct on this, could get it to run immediately only
-
+// get or creating element?  not sure thats the right thing
 let result= '';
 let i = 0;
 do {var characterAmountNumber = parseInt(window.prompt("Please enter a number between 8 and 128 for your password length.", ""), 10);
