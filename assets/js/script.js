@@ -1,27 +1,39 @@
 // Assignment code here
 
+
 // https://stackoverflow.com/questions/15047140/javascript-prompt-number-and-continue-prompting-if-answer-is-wrong not sure this is right
 
-
-
 PROMPTS
+/* video https://www.youtube.com/watch?v=ncKbvZUIJn0
+
+Do I need to console log data first? */
+
+
+
+
 
 // Length Prompt - More Complex - Need to validate number meets range and actually is a number - not sure this is close yet
 characterAmountNumber = prompt("How many characters do you want toinclude in your password? Must between 8-128.","8");
 
-function LengthPrompt() ("How many characters do you want toinclude in your password? Must between 8-128.","8");
-    if(text == '' ){
+function LengthPrompt() ("How many characters do you want toinclude in your password? Must between 8-128.","8"); // preview text is 8 ? confirm
      text = "Please enter a number from 8 - 128";   
     }
-    var number = parseInt(window.prompt(text, ""));
+    var number = parseInt(window.prompt(text, "")); // parse ---> making it a number,otherwise comes back as a string which wouldnt work for the part 2 check
     checkNumber(number);
 }
 function checkNumber(){
-if (number <= 128 && number >= 8) {
-    document.write("Your number (" + number + ")  matches requirements", "");
+if (number >= 8  && number <= 128) {
+    document.write("Your number (" + number + ")  matches requirements", ""); // maybe better if no respons ehere? may be a better approach
 } else if (isNaN(number)) {
     promptForNumber("Your submission (" + number + ") doesn't meet criteria. It is not between 8 and 128", "");
 }
+//does each question need a function or is there a more scalable way to do it
+//not sure this will do what I want confirming the variable as true
+//should it be console logged first? rewatch part of video covering this
+
+
+
+
 
 // 1st Prompt - Include uppercase
 var includeUppercase = prompt("Do you want to include Upper case letters in your password?");
@@ -72,7 +84,7 @@ characterAmountNumber.addEventlistener('input', syncCharacterAmount) //takes num
   const password = generatePassword(characterAmount,includeUppercase, includeLowercase, includeNumbers, includeSpecial)
   passwordDisplay.innerText = password
 })
-
+//shows to user
 
 
 // do not actually need to list these out, can tie them to a constant representing long list
@@ -81,14 +93,16 @@ const UPPERCASEE_CHAR_CODES = arrayFromLowToHigh(65,90)
 const LOWERCASE_CHAR_CODES = arrayFromLowToHigh(97,122)
 const NUMBER_CHAR_CODES = arrayFromLowToHigh(48,57
 const SYMBOL_CHAR_CODES = arrayFromLowToHigh(33, 47).concat(arrayFromLowToHigh(58,64), .concat(arrayFromLowToHigh(91,96), .concat(arrayFromLowToHigh(123,126)
-)
-//will need to make true to question = include
+) // symbols all over the chart here so list is pieced together
+// technique/approach from YouTube video and seems streamlined but may be an alternate wayt hats better
+// need to rewatch second half of video to review this part 
+// will need to make true to question = include
 
 function generatePassword (characterAmount,includeUppercase, includeLowercase, includeNumbers, includeSpecial){
   let charCodes =LOWERCASE_CHAR_CODES
-  if (includeUppercase) charCodes = charCodes.concat (UPPERCASE_CHAR_CODES) // are these less random if concatenated?
+  if (includeUppercase) charCodes = charCodes.concat (UPPERCASE_CHAR_CODES)
   if (includeNumbers) charCodes = charCodes.concat (NUMBER_CHAR_CODES)
-  if (includeSpecial) charCodes = charCodes.concat (SYMBOL_CHAR_CODES)
+  if (includeSpecial) charCodes = charCodes.concat (SPECIAL_CHAR_CODES)
 
 const passwordCharacters = []
 for (let i = 0; i < characterAmount, i++) {
