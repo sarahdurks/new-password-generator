@@ -9,14 +9,12 @@ PROMPTS
 // Length Prompt - More Complex - Need to validate number meets range and actually is a number - not sure this is close yet
 characterAmountNumber = prompt("How many characters do you want toinclude in your password? Must between 8-128.","8");
 
-function promptcharacterAmountNumber( text)
-{
+function LengthPrompt() ("How many characters do you want toinclude in your password? Must between 8-128.","8");
     if(text == '' ){
      text = "Please enter a number from 8 - 128";   
     }
     var number = parseInt(window.prompt(text, ""));
     checkNumber(number);
-
 }
 function checkNumber(){
 if (number <= 128 && number >= 8) {
@@ -60,7 +58,7 @@ const passwordDisplay = document.getElementById('passwordDisplay') // maps to wh
 
 
 characterAmountNumber.addEventlistener('input', syncCharacterAmount) //takes number we finally accept from first prompt in the right range
-// May need thisbut if receiving prompts above maybe not. This is the "form version from video" 
+// May need thisbut if receiving prompts above maybe not. This is the "form version" from video
 //listen for form submission - needsto change to go to prompts
 //form.addEventListener('submit', e => {
  // e.preventDefault()
