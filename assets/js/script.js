@@ -47,6 +47,24 @@ if (includeLowercase === false && includeUppercase === false && includeSpecial =
     alert("At least one complex password component must be selected, please try again.")
 //clearly not the most user friendly way ^
 }
+c//an we convert somehow like this?https://www.w3schools.com/jsref/met_document_createelement.asp
+  //part of an API? storing globacal public
+  /*function getInput() {
+    window.userInput = document.getElementById('userInput').value;
+    console.log(userInput);
+    alertUserInput();
+}  
+
+function alertUserInput() {
+    alert(userInput);
+}
+*/
+
+var subButton = document.getElementById('subButton');
+subButton.addEventListener('click', userInput, false);
+ 
+
+
 // how do i aggregate and convert the trues?
 
 // DOCUMENTED USER INPUTS >> CONSTANTS
