@@ -1,39 +1,41 @@
 
+var characterAmountNumber
+var includeUppercase     
+var includeLowercase
+var includeNumbers
+var includeSpecial
 
-// 1st Step - Establish Password Length, convert to number, user has to do it to progress
-//// Messaging when it doesn't meet criteria? Right now it just loops you. Trigger from button not correct on this, could get it to run immediately only
-// get or creating element?  not sure thats the right thing
-let result= '';
-let i = 0;
-do {var characterAmountNumber = parseInt(window.prompt("Please enter a number between 8 and 128 for your password length.", ""), 10);
-} while(isNaN(characterAmountNumber) || characterAmountNumber > 128 || characterAmountNumber < 8);
-{
-document.createElementId(characterAmountNumber);}
+const newLocal = "myBtn"
+document.getElementById(newLocal).addEventListener("click", myFunction);
 
-// 2nd Step - Include uppercase 
-//// Trying to tie user answering question to create "item" representing criteria if true, then if it exists it will be part of passsword later
-//// May be a console.log >> convert or "remember" other way? return the value?
-  var includeUppercase = window.confirm("Do you want to include Upper case letters in your password?");
-    if (confirm(includeUppercase) == true) {
-    document.createElementId(includeUppercase);
-}
-  // 3rd Step - Include lowercase
-  var includeLowercase = window.confirm("Do you want to include Lower case letters in your password?");
-    if (confirm(includeLowercase) == true) {
-    document.createElementId(includeLowercase);
-}
-   // 4th Step - Include numbers
-   var includeNumbers = window.confirm("Do you want to include Numbers in your password?");
-   if (confirm (includeNumbers)== true) {
-    document.createElementId(includeNumbers);
-    }
-  
-    // 5th Step - Include special characters
-    var includeSpecial = window.confirm("Do you want to include Special Characters (e.g., !@#$%) in your password?");
-    if (confirm (includeSpecial) == true) {
-    document.createElementId(includeSpecial);
-    }
-  
+function myFunction() {
+    var charachterAmountNumber = 0
+    do {var characterAmountNumber = parseInt(prompt("Please enter a number between 8 and 128 for your password length.", ""));
+} while(isNaN(characterAmountNumber) || characterAmountNumber > 128 || characterAmountNumber < 8); {
+           if (characterAmountNumber =>8 && characterAmountNumber <=128) {
+           break; 
+        }
+    if (charachterAmountNumber) {
+        if (confirm("Would you like to use lowercase characters?") == true) {
+            includeLowercase = true
+        } 
+
+        if (confirm("Do you want to include Upper case letters in your password?") == true) {
+            includeUppercase = true
+        }
+
+        if (confirm("Do you want to include Special Characters (e.g., !@#$%) in your password?") == true) {
+            includeSpecial = true
+        }
+
+        if (confirm("Do you want to include Numbers in your password?") == true) {
+            includeNumbers = true
+        }
+        if (includeLowercase === false && includeUppercase === false && includeSpecial === false && includeNumbers === false) {
+            alert("At least one complex password component must be selected.")
+        }
+
+
     // DOCUMENTED USER INPUTS >> CONSTANTS
     const characterAmountNumber = document.getElementById('characterAmountNumber')
     const IncludeUppercaseElement = document.getElementById('includeUppercase')
@@ -83,19 +85,3 @@ function syncCharacterAmount(e) {
     characterAmountRange.value = value
 }
 
-
-//What happens if someone says no to every character type?
-
-// 
-//* https://stackoverflow.com/questions/15047140/javascript-prompt-number-and-continue-prompting-if-answer-is-wrong not sure this is right
-// PROMPTS//www.youtube.com/watch?v=ncKbvZUIJn0
-// 
-// code from video I'm preserving to reference logic of - instead of "checked" should be true from prompts
-// form.addEventListener('submit', e => {
-// e.preventDefault()
-// const characterAmount = characterAmountNumber.value
-// const includeUppercase = includeUppercaseElement.checked
-    // const includeLowercase = includeLowercaseElement.checked
-    // const includeNumbers = includeuNumbersElement.checked
-    // const includeSpecial = includeSpecialElement.checked
-    // ? characterAmountNumber.addEventlistener('input', syncCharacterAmount) // not sure on this part (had after password display)

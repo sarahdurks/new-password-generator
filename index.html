@@ -28,32 +28,7 @@
                 ></textarea>
               </div>
               <div class="card-footer">
-                <button id="generate" class="btn" onclick="promptMe()">Generate Password</button>
-                <button type="button" onClick="myfunc()">other button js in html file</button>
-  
-  <script>
- //  establish password length   
-let result= '';
-let i = 0;
-do{
-    var characterAmountNumber = parseInt(window.prompt("Please enter a number between 8 and 128 for your password length.", ""), 10);
-}while(isNaN(characterAmountNumber) || characterAmountNumber > 128 || characterAmountNumber < 8);
-
-console.log(characterAmountNumber);
-
-let result= '';
-let i = 0;
-var includeUppercase = window.confirm("Do you want to include Upper case letters in your password?");
-    if (confirm("includeUppercase") == true), {
-=
-        document.getElementById(“includeUppercase”);
-    }
-
-
-
-
-  </script>
-
+                <button id="myBtn" class="btn" >Generate Password</button>
         </div>
       </div>
     </div>
