@@ -5,67 +5,30 @@ var includeLowercase
 var includeNumbers
 var includeSpecial
 
-
-// event listener, but VS Code converted and hasnt worked yet
-
-const newLocal = "myBtn"
-document.getElementById("myBtn").addEventListener("click", myFunction);
-
-// trying to have the prompts run as a series, not sure thats done right
-// need to "remember inputs" to translate them to the constants like in video
-// originally got this first prompt to work validating in a number range now totally broken, not sure if it needs to flip back to a do/while
-// want to kick off function of "what are the criteria for this password" and cycle through
-// true option seemed efficient compared to earlier structure but nto sure its right
-
 function definePassword() {
     var characterAmountNumber = prompt("Please enter a number between 8 and 128 for your password length."));
-while (isNaN(characterAmountNumber) || characterAmountNumber > 128 || characterAmountNumber < 8); {
-    if (characterAmountNumber > 7 && characterAmountNumber < 129) console.log(parseInt(characterAmountNumber))
-    if {
-        break,
-    }
+do (isNaN(characterAmountNumber) || characterAmountNumber > 128 || characterAmountNumber < 8);
+    while (characterAmountNumber > 7 && characterAmountNumber < 129) 
+    
+    console.log(parseInt(characterAmountNumber))
 
-if (confirm("Would you like to use lowercase characters?") == true) {
-    includeLowercase = true
-}
+    var charachterTypes = function () {
+        includeLowercase = confirm("Would you like lowercase characters?")
+        if true == document.createElement('includeLowecase', {id:"includeLowecase"});
 
-if (confirm("Do you want to include Upper case letters in your password?") == true) {
-    includeUppercase = true
-}
+        includeUppercase = confirm("Would you like uppercase characters?")
+        if true == document.createElement('includeUppercase', {id:"includeUppercase"});
 
-if (confirm("Do you want to include Special Characters (e.g., !@#$%) in your password?") == true) {
-    includeSpecial = true
-}
+        includeNumbers = confirm("Would you like numeric characters?")
+        if true == document.createElement('includeSpecial', {id:"iincludeSpecial"});
 
-if (confirm("Do you want to include Numbers in your password?") == true) {
-    includeNumbers = true
-}
+        includeSpecial = confirm("Would you like special characters?")
+        if true == document.createElement('includeSpecial', {id:"iincludeSpecial"});
 
-//a prompt blocker at end trying to make a user include one complex type, need to make sure they go back to earlier step if no
 
 if (includeLowercase === false && includeUppercase === false && includeSpecial === false && includeNumbers === false) {
     alert("At least one complex password component must be selected, please try again.")
-//clearly not the most user friendly way ^
-}
-c//an we convert somehow like this?https://www.w3schools.com/jsref/met_document_createelement.asp
-  //part of an API? storing globacal public
-  /*function getInput() {
-    window.userInput = document.getElementById('userInput').value;
-    console.log(userInput);
-    alertUserInput();
-}  
-
-function alertUserInput() {
-    alert(userInput);
-}
-*/
-
-var subButton = document.getElementById('subButton');
-subButton.addEventListener('click', userInput, false);
- 
-
-
-// how do i aggregate and convert the trues?
+//loop back? 
 
 // DOCUMENTED USER INPUTS >> CONSTANTS
 const characterAmountNumber = document.getElementById('characterAmountNumber')
