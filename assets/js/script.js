@@ -1,17 +1,20 @@
-// declare variables (?)
-var characterAmountNumber
-var includeUppercase
-var includeLowercase
-var includeNumbers
-var includeSpecial
 
+// State variablees, make them equivalent to password components created by prompts (if done right)
+var CharachterAmountNumber = document.getElementById("CharacterAmountNumber");
+var lncludeLowecase = document.getElementById("lncludeLowecase");
+var lncludeUppercase = document.getElementById("lncludeLowecase");
+var includeNumbers = document.getElementById("includeNumbers");
+var includeSpecial = document.getElementById("includeSpecial");
+
+
+// Series of prompts to define criteria
 function definePassword() {
     var characterAmountNumber = prompt("Please enter a number between 8 and 128 for your password length."));
 do (isNaN(characterAmountNumber) || characterAmountNumber > 128 || characterAmountNumber < 8);
     while (characterAmountNumber > 7 && characterAmountNumber < 129) 
     
-    console.log(parseInt(characterAmountNumber))
-
+    consolelog(parseInt(characterAmountNumber))
+//?? how to save value differently as number
     var charachterTypes = function () {
         includeLowercase = confirm("Would you like lowercase characters?")
         if true == document.createElement('includeLowecase', {id:"includeLowecase"});
@@ -20,15 +23,15 @@ do (isNaN(characterAmountNumber) || characterAmountNumber > 128 || characterAmou
         if true == document.createElement('includeUppercase', {id:"includeUppercase"});
 
         includeNumbers = confirm("Would you like numeric characters?")
-        if true == document.createElement('includeSpecial', {id:"iincludeSpecial"});
+        if true == document.createElement('includeNumbers', {id:"includeNumbers"});
 
         includeSpecial = confirm("Would you like special characters?")
         if true == document.createElement('includeSpecial', {id:"iincludeSpecial"});
 
-
+// need to limit someone progressing if they dont make password complicated, not sure about looping them back
 if (includeLowercase === false && includeUppercase === false && includeSpecial === false && includeNumbers === false) {
     alert("At least one complex password component must be selected, please try again.")
-//loop back? 
+
 
 // DOCUMENTED USER INPUTS >> CONSTANTS
 const characterAmountNumber = document.getElementById('characterAmountNumber')
@@ -51,9 +54,7 @@ const LOWERCASE_CHAR_CODES = arrayFromLowToHigh(97, 122)
 const NUMBER_CHAR_CODES = arrayFromLowToHigh(48, 57)
 const SPECIAL_CHAR_CODES = arrayFromLowToHigh(33, 47).concat(arrayFromLowToHigh(58, 64), .concat(arrayFromLowToHigh(91, 96), .concat(arrayFromLowToHigh(123, 126))
 
-            // if we include a type in a password, this  references the array defined above
-            // suggestion from VS code changed this from being labeled function?
-            (characterAmount, includeUppercase, includeLowercase, includeNumbers, includeSpecial) => {
+            (characterAmountNumber, includeUppercase, includeLowercase, includeNumbers, includeSpecial) => {
                 let charCodes = LOWERCASE_CHAR_CODES; //why does this not map to includelowercase? also different order than listed in funciton above
                 if (includeUppercase) charCodes = charCodes.concat(UPPERCASE_CHAR_CODES);
                 if (includeNumbers) charCodes = charCodes.concat(NUMBER_CHAR_CODES);
