@@ -4,13 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <script src="../assets/js/script.js"></script>
     <title>Password Generator</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
-
-  <body>
-      <form id="passwordGeneratorForm" class="form">
         <body>
           <div class="wrapper">
             <header>
@@ -29,11 +25,32 @@
                 ></textarea>
               </div>
               <div class="card-footer">
-                <button id="generate" class="btn" onclick="includeUppercase()">Generate Password</button>
-            
+                  <form class="inputs">
+                <h3>Password Criteria</h3>
+                <p> <label for=""><b>Password Length</b></label>
+                  Select a password length between 8 and 128 charachters: 
+                  <input type="number" min="8" max="128" value="8"id="characterLength"> </p>
+        
+                  <p>  <label for=""><b>Uppercase Charachters: </b></label>Confirm to include UPPERCASE charachters: 
+                  <input type="checkbox" id="charachterUppercase"></p> 
 
-        </div>
-      </div>
-    </div>
-  </body>
-</html>
+
+                 <p> <label for=""><b>Lowercase Charachters: </b></label> Confirm to include lowercase charachters.
+                  <input type="checkbox" id="charachterLowercase"> </p>
+                        
+                  <p><label for=""><b>Numbers</b></label> Confirm to include numberic charachters:  
+                  <input type="checkbox" id="charachterNumbers"></p>
+
+               
+                 <p> <label for=""><b>Special Charachters</b></label> Confirm to include special (e.g., @#$%^&) charachters: 
+                  <input type="checkbox" id="charachterSpecial">  </p>
+                  </div>
+                </form>
+                
+                  <button type="submit" class=btn> Generate Password</button>
+                </div>
+            </div>
+            </div>
+    <script src="./assets/js/script.js"></script> 
+    </body>
+    </html>
