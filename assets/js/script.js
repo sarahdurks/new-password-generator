@@ -1,17 +1,21 @@
 //References items in DOM - creates constant for input of password criteria
-const charLengthVal = document.getElementById('charLength')
-const charUpperEl = document.getElementById('charUpper')
-const charLowerEl = document.getElementById('charLower')
-const charNumsEl = document.getElementById('charNums')
-const charSpecialEl = document.getElementById('charSpecial')
-const form = document.getElementbyId('passwordForm')
+const charRangeVal = document.getElementById('charRangeVal')
+const charLengthVal = document.getElementById('charLengthVal')
+const charUpperEl = document.getElementById('charUpperEl')
+const charLowerEl = document.getElementById('charLowerEl')
+const charNumsEl = document.getElementById('charNumsEl')
+const charSpecialEl = document.getElementById('charSpecialEl')
+const passwordForm = document.getElementbyId('passwordForm')
 const passwordDisplay = document.getElementById('passwordDisplay')
 
 
 //This isn't working yet, but in theory should listen and create a new constant based on state of input (e.g., if special checked, pSpecial created)
 // Should also prevent default of losing input/refreshing, and convert length input to a value from string
-charLength.addEventListener('input', charachterLengthfx)
-form.addEventListener('submit', e => {
+
+charRangeVal.addEventListener('input', charLengthfx)
+charLengthVal.addEventListener('input', charLengthfx)
+
+passwordForm.addEventListener('submit', e => {
 	e.preventDefault()
 	const pLength = charLengthVal.value
 	const pUpper = charUpperEl.checked
@@ -19,7 +23,7 @@ form.addEventListener('submit', e => {
 	const pNumbers = charNumsEl.checked
 	const pSpecial = charSpecialEl.checked
 	const password = generatePassword(pLength, pUpper, pLower, pNumbers, pSpecial)
-	passwordDisplay.innerText = password //maybe where things are breaking?
+	passwordDisplay.innerText = password 
 })
 
 //Don't yet have validation of missing criteria if no boxes selected + warning
@@ -47,7 +51,7 @@ function arrayRange(low, high) {
 
 //Puts together what is returned for each type
 function generatePassword(pLength, pLower, pUpper, pNumbers, pSpecial) {
-	let (pLower) charCodes = LOWER_CHAR // how do I make this not weird / understand first charcodes is pLower
+	let charCodes = LOWER_CHAR // how do I make this not weird / understand first charcodes is pLower
 	if (pUpper) charCodes = charCodes.concat(UPPER_CHAR)
 	if (pNumbers) charCodes = charCodes.concat(NUM_CHAR)
 	if (pSpecial) charCodes = charCodes.concat(SPECIAL_CHAR)
@@ -62,9 +66,9 @@ function generatePassword(pLength, pLower, pUpper, pNumbers, pSpecial) {
 	}
 	return pwChar.join('')
 }
-
-//there may be an easier way to do this since not keeping twp inputoptions for #s, like parseInt in prompts
+//can't get it to work without slider, so sync function needed
 function charLengthfx(e) {
 	const value = e.target.value
-	charLength.value = value
+	charLengthVal.value = value
+  charRangeVal.value = value
 }

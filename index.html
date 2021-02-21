@@ -1,59 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Password Generator</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-      </style>
-  </head>
-        <body>
-          <div class="wrapper">
-            <header>
-              <h1>Password Generator</h1>
-            </header>
-            <div class="card">
-              <div class="card-header">
-                <form id="passwordForm" class="form">
-                <h2>Generate Your Password</h2>
-              </div>
 
-      <!-- Password Should Display here -->  
-              <div class="card-body">
-                <textarea class="passwordDisplay"
-                placeholder="Your Secure Password"
-                  id="passwordDisplay"
-                >
-              </textarea>
-              <div class="card-footer">
-      <!-- Take user inputs for password criteria -->          
-                <h3>Password Criteria</h3>
-                <p> <label for="charLength">Password Length</label>
-                  (between 8 and 128 charachters)
-                  <input class="number-input" type="number" min="8" max="128" value="8" name="charLen" id="charLength"> </p>
-        
-                 <label for="charUpper">Uppercase Letters
-                  <input type="checkbox" name="charUpper" id="charUpper"></label>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Password Generator</title>
+	<link rel="stylesheet" href="./assets/css/style.css" />
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+	</style>
+</head>
 
-                 <label for="charLower">Lowercase Letters</label> 
-                  <input type="checkbox" name="charLower" id="charLower">
-                        
-                <label for="charNums">Numbers
-                  <input type="checkbox" name="charNums" id="charNums"></label> 
+<body>
+	<div class="wrapper">
+		<header>
+			<h1 class="title">Password Generator</h1>
+		</header>
+		<div class="card">
+			<div class="card-header">
+				<h2>Generate Your Password</h2>
+				<div class="card-body">
+					<!-- Password Should Display here -->
+					<textarea class="passwordDisplay" id="passwordDisplay">password</textarea>
 
-                 <label for="charSpecial">Special Charachters</label> 
-                  <input type="checkbox" name="charSpecial"  id="charSpecial">  
-                  </div>
-              
-                
-                  <button type="submit" class="btn"> Generate Your Password</button>
-                </form>
-                </div>
-            </div>
-            </div>
-    <script src="./assets/js/script.js"></script> 
-    </body>
-    </html>
+					<div class="card-footer">
+						<!-- Take user inputs for password criteria -->
+						<h3>Password Criteria</h3>
+            <form id="passwordForm" class="form">
+						<!--Input Slider and Checkbox for Password Length -->
+						<!--Sync relationship between these doesn't seem to work yet -->
+
+							<label for="charLengthVal">Password Length (between 8 and 128 charachters) </label>
+							<div class="character-amount-container">
+								<input type="range" min="8" max="128" value="8" step="1" name="charRangeVal" id="charRangeVal">
+								<input class="number-input" type="number" min="8" max="128" value="8" step="1" name="charLengthVal" id="charLengthVal">
+							</div>
+							<!--checkbox for Uppercase criteria -->
+							<label for="charUpperEl">Uppercase Letters</label>
+							<input type="checkbox" name="charUpperEl" id="charUpperEl">
+
+							<!--checkbox for Lowercase criteria -->
+							<label for="charLowerEl">Lowercase Letters</label>
+							<input type="checkbox" name="charLowerEl" id="charLowerEl">
+
+							<!--checkbox for Numbers criteria -->
+							<label for="charNumsEl">Numbers</label>
+							<input type="checkbox" name="charNumsEl" id="charNumsEl">
+
+							<!--checkbox for Special Characters criteria -->
+							<label for="charSpecialEl">Special Characters</label>
+							<input type="checkbox" name="charSpecialEl" id="charSpecialEl">
+
+							<!--Button -->
+							<button type="submit" class="btn"> Generate Your Password</button>
+					</div>
+					</form>
+				</div>
+				<!--?extra div -->
+			</div>
+			<script src="./assets/js/script.js"></script>
+</body>
+
+</html>
