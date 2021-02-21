@@ -13,7 +13,8 @@ body,
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  color: #c0c7cf;
   background-color: #f9fbfd;
 }
 
@@ -52,6 +53,9 @@ header {
 
 .card-body {
   min-height: 100px;
+  content: " ";
+  display: block;
+  width: 100%;
 }
 
 .card-footer {
@@ -97,7 +101,7 @@ button[disabled] {
   float: right;
 }
 
-#password {
+.password {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;

@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Password Generator</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+      </style>
   </head>
         <body>
           <div class="wrapper">
@@ -14,40 +17,41 @@
             </header>
             <div class="card">
               <div class="card-header">
+                <form>
                 <h2>Generate a Password</h2>
               </div>
+
+      <!-- Password Should Display here -->  
               <div class="card-body">
-                <textarea
-                  readonly
+                <textarea class="password"
                   id="passwordDisplay"
                   placeholder="Your Secure Password"
                   aria-label="Generated Password"
                 ></textarea>
               </div>
               <div class="card-footer">
-                  <form class="inputs">
+      <!-- Take user inputs for password criteria -->          
                 <h3>Password Criteria</h3>
-                <p> <label for=""><b>Password Length</b></label>
-                  Select a password length between 8 and 128 charachters: 
+                <p> <label for="charachterLength">Password Length</label>
+                  (between 8 and 128 charachters)
                   <input type="number" min="8" max="128" value="8"id="characterLength"> </p>
         
-                  <p>  <label for=""><b>Uppercase Charachters: </b></label>Confirm to include UPPERCASE charachters: 
-                  <input type="checkbox" id="charachterUppercase"></p> 
+                 <label for="charachterUppercase">Uppercase Letters</label>
+                  <input type="checkbox" id="charachterUppercase">
 
-
-                 <p> <label for=""><b>Lowercase Charachters: </b></label> Confirm to include lowercase charachters.
-                  <input type="checkbox" id="charachterLowercase"> </p>
+                 <label for="charachterLowercase">Lowercase Letters</label> 
+                  <input type="checkbox" id="charachterLowercase">
                         
-                  <p><label for=""><b>Numbers</b></label> Confirm to include numberic charachters:  
-                  <input type="checkbox" id="charachterNumbers"></p>
+                <label for="charachterNumbers">Numbers</label> 
+                  <input type="checkbox" id="charachterNumbers">
 
-               
-                 <p> <label for=""><b>Special Charachters</b></label> Confirm to include special (e.g., @#$%^&) charachters: 
-                  <input type="checkbox" id="charachterSpecial">  </p>
+                 <label for="charachterSpecial">Special Charachters</label> 
+                  <input type="checkbox" id="charachterSpecial">  
                   </div>
-                </form>
+              
                 
-                  <button type="submit" class=btn> Generate Password</button>
+                  <button type="submit" class="btn"> Generate Password</button>
+                </form>
                 </div>
             </div>
             </div>
