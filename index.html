@@ -23,30 +23,29 @@
 
       <!-- Password Should Display here -->  
               <div class="card-body">
-                <textarea class="password"
+                <textarea class="passwordDisplay"
+                placeholder="Your Secure Password"
                   id="passwordDisplay"
-                  placeholder="Your Secure Password"
-                  aria-label="Generated Password"
-                ></textarea>
-              </div>
+                >
+              </textarea>
               <div class="card-footer">
       <!-- Take user inputs for password criteria -->          
                 <h3>Password Criteria</h3>
                 <p> <label for="charachterLength">Password Length</label>
                   (between 8 and 128 charachters)
-                  <input class="number-input" type="number" min="8" max="128" value="8"id="characterLength"> </p>
+                  <input class="number-input" type="number" min="8" max="128" value="8" name="charachterLength" id="characterLength"> </p>
         
-                 <label for="charachterUppercase">Uppercase Letters</label>
-                  <input type="checkbox" id="charachterUppercase">
+                 <label for="charachterUppercase">Uppercase Letters
+                  <input type="checkbox" name="charachterUppercase" id="charachterUppercase"></label>
 
                  <label for="charachterLowercase">Lowercase Letters</label> 
-                  <input type="checkbox" id="charachterLowercase">
+                  <input type="checkbox" name="charachterLowercase" id="charachterLowercase">
                         
-                <label for="charachterNumbers">Numbers</label> 
-                  <input type="checkbox" id="charachterNumbers">
+                <label for="charachterNumbers">Numbers
+                  <input type="checkbox" name="charachterNumbers" id="charachterNumbers"></label> 
 
                  <label for="charachterSpecial">Special Charachters</label> 
-                  <input type="checkbox" id="charachterSpecial">  
+                  <input type="checkbox" name="charachterSpecial"  id="charachterSpecial">  
                   </div>
               
                 

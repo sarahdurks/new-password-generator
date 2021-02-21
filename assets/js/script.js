@@ -1,9 +1,9 @@
 // password components mapped to DOM ids per user input (checkboxes) of criteria
 const charachterLength = document.getElementById('charachterLength')
-const charachterUppercase = document.getElementById('charachterUppercase')
-const charachterLowercase = document.getElementById('charachterLowercase')
-const charachterNumbers = document.getElementById('charachterNumbers')
-const charachterSpecial = document.getElementById('charachterSpecial')
+const charachterUppercaseElement = document.getElementById('charachterUppercase')
+const charachterLowercaseElement = document.getElementById('charachterLowercase')
+const charachterNumbersElement = document.getElementById('charachterNumbers')
+const charachterSpecialElement = document.getElementById('charachterSpecial')
 const form = document.getElementbyId('passwordForm') // form in total
 const passwordDisplay = document.getElementById('passwordDisplay') //displayed password
 
@@ -12,13 +12,13 @@ const passwordDisplay = document.getElementById('passwordDisplay') //displayed p
 const UPPERCASE_CHAR_CODES = arrayFromLowToHigh(65, 90)
 const LOWERCASE_CHAR_CODES = arrayFromLowToHigh(97, 122)
 const NUMBER_CHAR_CODES = arrayFromLowToHigh(48, 57)
-const SPECIAL_CHAR_CODES = arrayFromLowToHigh(33, 47).concat(arrayFromLowToHigh(58, 64), .concat(arrayFromLowToHigh(91, 96), .concat(arrayFromLowToHigh(123, 126))
+const SPECIAL_CHAR_CODES = arrayFromLowToHigh(33, 47).concat(arrayFromLowToHigh(58, 64)).concat(arrayFromLowToHigh(91, 96)).concat(arrayFromLowToHigh(123, 126))
 
 
 
 // event listener for user input on password length, translating to value
 // has to be handled differently like parseInt in prompt approach, to get number
-charachterLength.addEventListener('input', inputCharachterLength)
+charachterLength.addEventListener('input', charachterLengthfx)
 
 // prevent refresh of page clearing inputs when user hits generate password (default behavior for event)
 form.addEventListener('submit', e => {
@@ -42,12 +42,11 @@ let charCodes = LOWERCASE_CHAR_CODES
 if (includeUppercase) charCodes = charCodes.concat(UPPERCASE_CHAR_CODES)
 if (includeNumbers) charCodes = charCodes.concat(NUMBER_CHAR_CODES)
 if (includeSpecial) charCodes = charCodes.concat(SPECIAL_CHAR_CODES)
-}
 
 const passwordCharacters = []
 for (let i = 0; i < passwordLength; i++) {
-const characterCode = charCodes[Math.floor(Math.random() * charCodes.length)]
-passwordCharacters.push(String.fromCharCode(charCodes))
+   const characterCode = charCodes[Math.floor(Math.random() * charCodes.length)]
+   passwordCharacters.push(String.fromCharCode(characterCode))
 }
 return passwordCharacters.join('')
 }
@@ -60,7 +59,7 @@ for (let i = low; i <= high; i++) {
 return array
 }
 
-function inputCharachterLength(e) {
+function charachterLengthfx(e) {
   const value = e.target.value
   charachterLength.value = value
 }
