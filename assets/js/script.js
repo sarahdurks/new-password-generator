@@ -5,7 +5,7 @@ const charUpperEl = document.getElementById('charUpperEl')
 const charLowerEl = document.getElementById('charLowerEl')
 const charNumsEl = document.getElementById('charNumsEl')
 const charSpecialEl = document.getElementById('charSpecialEl')
-const passwordForm = document.getElementbyId('passwordForm')
+const passwordForm = document.getElementById('passwordForm')
 const passwordDisplay = document.getElementById('passwordDisplay')
 
 //on submit event, prevents "refresh" default - but doesnt seem to be working
