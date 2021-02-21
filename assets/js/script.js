@@ -8,13 +8,8 @@ const charSpecialEl = document.getElementById('charSpecialEl')
 const passwordForm = document.getElementbyId('passwordForm')
 const passwordDisplay = document.getElementById('passwordDisplay')
 
-
-//This isn't working yet, but in theory should listen and create a new constant based on state of input (e.g., if special checked, pSpecial created)
-// Should also prevent default of losing input/refreshing, and convert length input to a value from string
-
-charRangeVal.addEventListener('input', charLengthfx)
-charLengthVal.addEventListener('input', charLengthfx)
-
+//on submit event, prevents "refresh" default - but doesnt seem to be working
+//should create constants for true states  - pUpper = user checked uppercase values
 passwordForm.addEventListener('submit', e => {
 	e.preventDefault()
 	const pLength = charLengthVal.value
@@ -50,13 +45,12 @@ function arrayRange(low, high) {
 }
 
 //Puts together what is returned for each type
-function generatePassword(pLength, pLower, pUpper, pNumbers, pSpecial) {
-	let charCodes = LOWER_CHAR // how do I make this not weird / understand first charcodes is pLower
+//pUpper should mean user selected they do want Uppercase charachters
+function generatePassword(pLength, pLower, pUpper, pNumbers, pSpecial) { //is it a problem that pLower not the same color? says its never read`
+	let charCodes = LOWER_CHAR 
 	if (pUpper) charCodes = charCodes.concat(UPPER_CHAR)
 	if (pNumbers) charCodes = charCodes.concat(NUM_CHAR)
 	if (pSpecial) charCodes = charCodes.concat(SPECIAL_CHAR)
-
-
 
 	//output of additive/concat categories for password, should display for user
 	const pwChar = []
@@ -65,10 +59,19 @@ function generatePassword(pLength, pLower, pUpper, pNumbers, pSpecial) {
 		pwChar.push(String.fromCharCode(characterCode))
 	}
 	return pwChar.join('')
+	
 }
+
+//Need to tie these two things together
+charRangeVal.addEventListener('input', charLengthfx)
+charLengthVal.addEventListener('input', charLengthfx)
+
+
 //can't get it to work without slider, so sync function needed
+//sync function doesn't seem to be working
+// based on search this happens but solutions often brought up jquery so i must have something wrong
 function charLengthfx(e) {
 	const value = e.target.value
 	charLengthVal.value = value
-  charRangeVal.value = value
+  	charRangeVal.value = value
 }

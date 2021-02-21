@@ -27,11 +27,11 @@
 					<div class="card-footer">
 						<!-- Take user inputs for password criteria -->
 						<h3>Password Criteria</h3>
-            <form id="passwordForm" class="form">
+            		<form id="passwordForm" class="form">
 						<!--Input Slider and Checkbox for Password Length -->
 						<!--Sync relationship between these doesn't seem to work yet -->
 
-							<label for="charLengthVal">Password Length (between 8 and 128 charachters) </label>
+							<label for="charLengthVal">Password Length (between 8 and 128 charachters) </label> <!-- length not range should be whats picked up to define pw char count-->
 							<div class="character-amount-container">
 								<input type="range" min="8" max="128" value="8" step="1" name="charRangeVal" id="charRangeVal">
 								<input class="number-input" type="number" min="8" max="128" value="8" step="1" name="charLengthVal" id="charLengthVal">
@@ -54,10 +54,9 @@
 
 							<!--Button -->
 							<button type="submit" class="btn"> Generate Your Password</button>
-					</div>
+					
 					</form>
 				</div>
-				<!--?extra div -->
 			</div>
 			<script src="./assets/js/script.js"></script>
 </body>

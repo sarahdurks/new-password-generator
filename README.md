@@ -1,3 +1,8 @@
+## Current Status
+Still not functional, so will complete ReadMe when less broken
+Deviates from prompt() request with on-page inputs
+Think it starts breaking down at relationship between slider and number input (which don't align like they should
+
 ## User Story
 > AS AN employee with access to sensitive data   
 > I WANT to randomly generate a password that meets certain criteria   
