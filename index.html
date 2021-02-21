@@ -17,8 +17,8 @@
             </header>
             <div class="card">
               <div class="card-header">
-                <form>
-                <h2>Generate a Password</h2>
+                <form id="passwordForm" class="form">
+                <h2>Generate Your Password</h2>
               </div>
 
       <!-- Password Should Display here -->  
@@ -34,7 +34,7 @@
                 <h3>Password Criteria</h3>
                 <p> <label for="charachterLength">Password Length</label>
                   (between 8 and 128 charachters)
-                  <input type="number" min="8" max="128" value="8"id="characterLength"> </p>
+                  <input class="number-input" type="number" min="8" max="128" value="8"id="characterLength"> </p>
         
                  <label for="charachterUppercase">Uppercase Letters</label>
                   <input type="checkbox" id="charachterUppercase">
@@ -50,7 +50,7 @@
                   </div>
               
                 
-                  <button type="submit" class="btn"> Generate Password</button>
+                  <button type="submit" class="btn"> Generate Your Password</button>
                 </form>
                 </div>
             </div>
