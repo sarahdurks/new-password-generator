@@ -1,6 +1,12 @@
 
 ![Thumbnail (3)](https://user-images.githubusercontent.com/77648727/108649361-01c95e80-7472-11eb-8f60-1854e2f2b374.png)
 
+# Name 
+ |![image 16 (2)](https://user-images.githubusercontent.com/77648727/108654344-54f4de80-747d-11eb-9a16-12318f82e4a8.png)| UC Berkeley Coding Bootcamp <br> Week 3 Project |
+|---|:---| 
+
+JavaScript Random Password Generator 
+
 See live application [here on Github.io](https://sarahdurks.github.io/new-password-generator/)
 ### Built With :toolbox: 
 - HTML
