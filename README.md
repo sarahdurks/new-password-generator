@@ -5,7 +5,7 @@
  |![image 16 (2)](https://user-images.githubusercontent.com/77648727/108654344-54f4de80-747d-11eb-9a16-12318f82e4a8.png)| UC Berkeley Coding Bootcamp <br> Week 3 Project |
 |---|:---| 
 
-#### JavaScript Random Password Generator 
+### JavaScript Random Password Generator 
 
 See live application [here on Github.io](https://sarahdurks.github.io/new-password-generator/)
 
