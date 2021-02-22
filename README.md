@@ -46,12 +46,12 @@ The following was completed:
 
 # Authors, Acknowledgement, & Resources :handshake:
 
-### How to Guides
-[Build A Password Generator With JavaScript - Tutorial](https://www.youtube.com/watch?v=iKo9pDKKHnc)
-[How to Guide from PC mag](https://www.pcmag.com/how-to/how-to-create-a-random-password-generator),
-[Make a Random Password Generator Guide](https://junilearning.com/blog/coding-projects/make-a-java-random-password-generator/),
-[Stack Overflow Threads](https://stackoverflow.com/questions/1497481/javascript-password-generator),
-[More Stack Overflow Threads](https://stackoverflow.com/questions/28970925/basic-javascript-password-generator),
+### How to Guides :pencil:
+[Build A Password Generator With JavaScript - Tutorial](https://www.youtube.com/watch?v=iKo9pDKKHnc)  
+[How to Guide from PC mag](https://www.pcmag.com/how-to/how-to-create-a-random-password-generator)    
+[Make a Random Password Generator Guide](https://junilearning.com/blog/coding-projects/make-a-java-random-password-generator/)    
+[Stack Overflow Threads](https://stackoverflow.com/questions/1497481/javascript-password-generator)   
+[More Stack Overflow Threads](https://stackoverflow.com/questions/28970925/basic-javascript-password-generator)   
 [How to Video](https://www.youtube.com/watch?v=duNmhKgtcsI&ab_channel=TraversyMedia)
 
 ### Insight & Support from Teaching Crew at UCB Coding Bootcamp :tada:
