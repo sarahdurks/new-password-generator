@@ -60,6 +60,6 @@ The following was completed:
 ### OWASP :key:
 [Password Special Characters](https://owasp.org/www-community/password-special-characters)
 
-### Google Fonts :pencil:
+### Google Fonts :pen:
 [Google Fonts Montserrat](https://fonts.google.com/specimen/Montserrat?preview.text_type=custom)
 
