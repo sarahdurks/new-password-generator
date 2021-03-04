@@ -1,11 +1,11 @@
+
 ![Frame 21 (1)](https://user-images.githubusercontent.com/77648727/109901151-62645280-7c4d-11eb-933b-1e8ed6e1c76a.png)
 
 # Name 
 
 ### JavaScript Random Password Generator     
 
-![Frame 50 (1)](https://user-images.githubusercontent.com/77648727/109910947-0a821780-7c5e-11eb-85fb-acec0eca3e5f.png)
-
+![Frame 46 (1)](https://user-images.githubusercontent.com/77648727/109911113-55039400-7c5e-11eb-8325-2698eba804ac.png)
 
 
 See live application [here on Github.io](https://sarahdurks.github.io/new-password-generator/)
