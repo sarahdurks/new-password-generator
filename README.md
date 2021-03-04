@@ -4,7 +4,7 @@
 
 ### JavaScript Random Password Generator     
 
-![Frame 50](https://user-images.githubusercontent.com/77648727/109910806-d4449800-7c5d-11eb-8d85-b35f8796e52a.png)
+![Frame 50 (1)](https://user-images.githubusercontent.com/77648727/109910947-0a821780-7c5e-11eb-85fb-acec0eca3e5f.png)
 
 
 
